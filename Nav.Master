@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Nav.master.cs" Inherits="AppFactory.Nav" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title><%: Page.Title%>AppFactory</title> 
+        <link href="~/Contents/Styles.css" type="text/css" media="screen" rel="stylesheet" runat="server" />  
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    
+    <nav > 
+        <ul>  
+            <li><a href="/" class="Logo">AppFactory 2020</a></li>
+            <li><a href="Capture.aspx">Capture</a></li>
+            <li ><a href="Contact.aspx"> Contact</a></li>
+            <li><a href="About.aspx">About</a></li> 
+            <li class="People"><a>People ></a>
+                <ul>
+                    <li><a href="Intern.aspx">Intern</a></li>
+                    <li><a href="Mentor.aspx">Mentor</a></li>
+                    <li><a href="Manager.aspx">Manager</a></li>
+                </ul>
+            </li> 
+        </ul> 
+    </nav> 
+        <div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div> 
+</body>
+</html>

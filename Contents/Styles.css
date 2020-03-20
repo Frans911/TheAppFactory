@@ -1,0 +1,227 @@
+﻿body {
+
+}
+nav {
+    background: #E0E0E0;
+    border-radius: 5px;
+    margin: 0.5em; 
+    height:50px
+}
+    nav li { 
+        margin:1% 0 0 0;
+    }
+    nav ul li ul li {
+        display:none; 
+    }
+    nav .Logo {
+        background: white;
+        color: #4FC3F7;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold
+    }
+    nav .Logo:hover {
+        background: white;
+        color: black;
+        border-radius: 5px;
+    }
+    nav ul li {
+        float: left;
+        font-family: Bahnschrift;
+        padding-right: 25px;
+        padding-left: 25px;
+        border-radius: 5px;
+        list-style: none;
+        font-weight:lighter;
+    }
+
+        nav ul li a {
+            color: white;
+            padding: 5px 15px 5px 15px; 
+        }
+
+            nav ul li a:hover {
+                cursor: pointer;
+                background: #4FC3F7;
+                color: black;
+                border-radius: 5px;
+            }
+    nav ul .People:hover ul li {
+        cursor: pointer;
+        color: black;
+        border-radius: 5px;
+        display: block;
+        float: none;
+        background: #4FC3F7;
+        padding: 5px 15px 5px 15px;
+        margin:0.5em;    }
+    nav ul .People {
+        text-decoration:underline;
+    }
+.Welcome {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0;
+    width: 80%;
+    margin: 10% 0 0 10%;
+    height: 500px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px black;
+}
+.Interns {
+    width: 80%;
+    margin: 10% 0 0 10%;
+    height: auto;
+    border-radius: 5px;
+    font-family: Bahnschrift;
+    box-shadow: 3px 3px 5px black;
+    text-align: center;
+}
+.Cell {
+    padding: 10px;
+    border-radius: 5px;
+    color:black
+}
+.Message {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    font-family: 'Titan One';
+    font-size: 20pt;
+    color: #4FC3F7; 
+    padding: 15% 0 0 0;
+    border-top: 1px solid #E0E0E0;
+    border-bottom: 1px solid #E0E0E0;
+    border-left: 0.5pt solid #E0E0E0;
+    border-radius: 5px 0 0 5px; 
+
+}
+    .Message p {
+        font-family: Bahnschrift;
+        font-size: 10pt;
+        color:black;
+        margin:0.5em
+    }
+    .Message h1 {
+        margin: 10% 0 0 5%;
+        font-weight: lighter;
+        animation: animate 3s ease-in-out normal;
+        
+    }
+
+.Picture {
+    grid-column: 2 / 3;
+    background-image: url('Picture.jpg');
+    background-size: cover;
+    border-radius:0 5px 5px 0; 
+}
+.Feedback {
+    padding-top: 10px;
+    padding-bottom: 50px;
+    width: 30%;
+    margin: 5% 0 0 35%;
+    text-align: center;
+    border-radius: 5px;
+    font-family: Bahnschrift;
+    height: auto;
+    color: #58D68D;
+    box-shadow: 3px 3px 5px black;
+}
+.CaptureForm {
+    padding-top: 10px;
+    padding-bottom: 50px;
+    width: 30%;
+    margin: 5% 0 0 35%;
+    text-align: center;
+    border-radius: 5px;
+    font-family: Bahnschrift;
+    height: auto;
+    color: #4FC3F7;
+    box-shadow: 3px 3px 5px black;
+}
+    .CaptureForm input {
+        width: 50%;
+        height: 30px;
+        border: none;
+        /*border-radius: 5px;*/
+        /*text-align: center;*/
+        font-family: Bahnschrift;
+        border-bottom:1px solid black;
+    }
+.Button1 {
+    width: 40%;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    font-family: Bahnschrift;
+    background-color: #58D68D;
+    box-shadow: 5px 5px 5px black;
+    color:white; 
+}
+.Button5 {
+    width: 40% !important;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    font-family: Bahnschrift;
+    background-color: #E74C3C;
+    box-shadow: 3px 3px 5px black;
+    color: white;
+    float: left;
+    margin: 0 0 0 5%;
+}
+.Button6 {
+    width: 40% !important;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    font-family: Bahnschrift;
+    background-color: #58D68D;
+    box-shadow: 3px 3px 5px black;
+    color: white;
+}
+.Button3 {
+    width: 40%;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    font-family: Bahnschrift;
+    background-color: #58D68D;
+    box-shadow: 3px 3px 5px black;
+    color: white;
+    font-size: 0.65em;
+    padding: 0.5em;
+    margin: 0 0 0 35%;
+    text-decoration: none;
+    padding-right: 2em;
+    padding-left: 2em;
+}
+.Button2 {
+    width: 40%;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    font-family: Nunito;
+    background-color: #5DADE2;
+    box-shadow: 5px 5px 5px black;
+    color: white;
+}
+.Button4 {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    font-family: Bahnschrift;
+    background-color: #58D68D;
+    box-shadow: 2px 2px 5px black;
+    color: white;
+}
+@keyframes animate {
+    0% {
+        opacity: 1;
+        transform: translateY(-40px);
+    } 
+    100% { 
+        opacity:1;
+    }
+}
+
