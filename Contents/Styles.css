@@ -1,11 +1,10 @@
 ﻿body {
 
 }
-nav {
-    background: #E0E0E0;
+nav { 
     border-radius: 5px;
-    margin: 0.5em; 
-    height:50px
+    margin: 0.5em;
+    height: 50px
 }
     nav li { 
         margin:1% 0 0 0;
@@ -78,9 +77,10 @@ nav {
     text-align: center;
 }
 .Cell {
-    padding: 10px;
+    padding: 0.5em;
     border-radius: 5px;
-    color:black
+    color:black; 
+    margin:0.5em;
 }
 .Message {
     grid-column: 1 / 2;
@@ -102,7 +102,7 @@ nav {
         margin:0.5em
     }
     .Message h1 {
-        margin: 10% 0 0 5%;
+        margin: 10% 0 0 15%;
         font-weight: lighter;
         animation: animate 3s ease-in-out normal;
         

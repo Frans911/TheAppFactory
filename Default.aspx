@@ -6,7 +6,7 @@
               in their personal growth to become more relevant and marketable. This will make it more attractive for 
               industry to take talented and passionate young people and give them the chance to harness and develop world-class 
               software development skills </p>
-              <a class="Button3" href="Capture.aspx">Getting Started</a>
+              <a class="Button3 btn-light" href="Capture.aspx">Getting Started</a>
           </div>
           <div class="Picture"></div>
     </div>
