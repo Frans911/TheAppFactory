@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
-using System.Web.UI.WebControls;
+using System.Web.UI.WebControls; 
 
 namespace AppFactory
 {
@@ -51,7 +51,8 @@ namespace AppFactory
 			set { reader = value; }
 		}
 		public void UpdateData(string query,int Row, string firstName, string lastName, string dob, string contacts, string mail, bool primary, bool business, string roles)
-		{
+		{ 
+
 			using (sqlConnection = new SqlConnection(connectionstring))
 			{
 				try
@@ -76,9 +77,8 @@ namespace AppFactory
 				}
 			}
 		}
-		public void StoreData(string query, string firstName, string lastName, string dob, string contacts, string mail, bool primary, bool business, string roles) {
- 
-			//System.Diagnostics.Debug.WriteLine($"First Name :{firstName}\nLast Name :{lastName}\nDOB :{dob}\nContacts :{contacts}\nEmail :{mail}\nCell primary :{primary}\nEmail business :{business}");
+		public void StoreData(string query, string firstName, string lastName, string dob, string contacts, string mail, bool primary, bool business, string roles) { 
+
 			using (sqlConnection = new SqlConnection(connectionstring))
 			{
 				try
@@ -103,7 +103,7 @@ namespace AppFactory
 				}
 			}
 		}
-		public void EditData(string query,string row, TextBox FirstName,TextBox LastName,Calendar calendar,TextBox contacts,TextBox email, CheckBox primary, CheckBox business,DropDownList roles) {
+		public void EditData(string query,int row, TextBox FirstName,TextBox LastName,Calendar calendar,TextBox contacts,TextBox email, CheckBox primary, CheckBox business) {
 			using (sqlConnection = new SqlConnection(connectionstring))
 			{
 				try
@@ -111,7 +111,7 @@ namespace AppFactory
 					sqlConnection.Open();
 					System.Diagnostics.Debug.WriteLine($"Connection established...");
 					sqlCommand = new SqlCommand(query, sqlConnection);
-					sqlCommand.Parameters.AddWithValue("@SelectedPerson", Convert.ToInt32(row));
+					sqlCommand.Parameters.AddWithValue("@SelectedPerson", row);
 					reader = sqlCommand.ExecuteReader();
 					while (reader.Read())
 					{
@@ -133,7 +133,7 @@ namespace AppFactory
 				}
 			}
 		}
-		public void ExtractData(string query, ref Table Interns, Panel pnlInternsEdit, Panel pnlFormInternsTable, TextBox txtFirstName, TextBox txtLastName, Calendar calendar, TextBox contacts, TextBox email, CheckBox primary, CheckBox business, DropDownList roles,Label label)
+		public void ExtractData(string query, ref Table Interns)
 		{
 			using (sqlConnection = new SqlConnection(connectionstring))
 			{
@@ -150,11 +150,10 @@ namespace AppFactory
 						button.Text = "Edit";
 						button.CssClass = "Button4";
 						button.ID = reader[7].ToString();
-						this.row = reader[7].ToString();
-						string editQuery = @"SELECT FirstName,Surname,FullName,DateOfBirth,StartDate,EmailAddress,CellPhoneNo,Person.PersonId,CellPhone.IsPrimary,Email.IsBusiness FROM Person 
-                                     INNER JOIN Email ON Person.PersonId = Email.PersonId 
-                                     INNER JOIN CellPhone ON Person.PersonId = CellPhone.PersonId WHERE Person.PersonTypeId = 1 AND Person.PersonId = @SelectedPerson";
-						button.Click += (s, e) => {pnlInternsEdit.Visible = true;pnlFormInternsTable.Visible = false;EditData(editQuery, button.ID, txtFirstName,txtLastName,calendar,contacts,email,primary,business,roles); label.Text = button.ID; };
+						this.row = reader[7].ToString(); 
+						button.Click += (s, e) => {
+							HttpContext.Current.Response.Redirect($"Edit.aspx?{button.ID}"); 
+						};
 						TableRow row = new TableRow();
 						TableCell FirstName = new TableCell();
 						TableCell LastName = new TableCell();

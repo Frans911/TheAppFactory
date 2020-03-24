@@ -52,9 +52,9 @@ C:\Users\User\source\repos\AppFactory\AppFactory\bin\roslyn\VBCSCompiler.exe
 C:\Users\User\source\repos\AppFactory\AppFactory\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\User\source\repos\AppFactory\AppFactory\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\User\source\repos\AppFactory\AppFactory\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\User\source\repos\AppFactory\AppFactory\obj\Debug\AppFactory.csprojAssemblyReference.cache
 C:\Users\User\source\repos\AppFactory\AppFactory\obj\Debug\AppFactory.csproj.CopyComplete
 C:\Users\User\source\repos\AppFactory\AppFactory\obj\Debug\AppFactory.dll
 C:\Users\User\source\repos\AppFactory\AppFactory\obj\Debug\AppFactory.pdb
 C:\Users\User\source\repos\AppFactory\AppFactory\bin\System.Data.SqlClient.dll
 C:\Users\User\source\repos\AppFactory\AppFactory\bin\System.Data.SqlClient.xml
+C:\Users\User\source\repos\AppFactory\AppFactory\obj\Debug\AppFactory.csprojAssemblyReference.cache
